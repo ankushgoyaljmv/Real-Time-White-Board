@@ -22,6 +22,7 @@ socketServer.on("connection", function (socket) {
 // app.get("/home",function(req,res){
 //     res.sendFile(path.join(__dirname,"public/index.html"));
 // })
-httpServer.listen(3000, function () {
+let port = process.env.PORT || 3000;
+httpServer.listen(port, function () {
     console.log("Sever is listening to request");
 })
